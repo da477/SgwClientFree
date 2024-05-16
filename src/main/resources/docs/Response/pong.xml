@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<B4B xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://swedbankgateway.net/valid/hgw-response.xsd">
+  <Pong from="EE">
+    <Value>20240404192130184</Value>
+  </Pong>
+</B4B>

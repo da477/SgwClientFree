@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.053.001.02">
+	<BkToCstmrStmt>
+		<GrpHdr>
+			<MsgId>202404045737999980001</MsgId>
+			<CreDtTm>2024-04-04T13:59:59</CreDtTm>
+		</GrpHdr>
+		<Stmt>
+			<Id>573799998-EUR-1</Id>
+			<ElctrncSeqNb>573799998</ElctrncSeqNb>
+			<CreDtTm>2024-04-04T13:59:59</CreDtTm>
+			<FrToDt>
+				<FrDtTm>2024-04-04T00:00:00</FrDtTm>
+				<ToDtTm>2024-04-04T23:59:59</ToDtTm>
+			</FrToDt>
+			<Acct>
+				<Id>
+					<IBAN>EE062200221055091966</IBAN>
+				</Id>
+				<Ccy>EUR</Ccy>
+				<Ownr>
+					<Nm>Kuldvõtmega Kindluskindlustus AS</Nm>
+					<PstlAdr>
+						<Ctry>EE</Ctry>
+						<AdrLine>Universumikuma tee 9, Kosmoseküla, 45678</AdrLine>
+					</PstlAdr>
+					<Id>
+						<OrgId>
+							<Othr>
+								<Id>10000345</Id>
+							</Othr>
+						</OrgId>
+					</Id>
+				</Ownr>
+				<Svcr>
+					<FinInstnId>
+						<BIC>HABAEE2X</BIC>
+						<Nm>SWEDBANK AS</Nm>
+						<PstlAdr>
+							<Ctry>EE</Ctry>
+							<AdrLine>LIIVALAIA 8, 15040, TALLINN</AdrLine>
+						</PstlAdr>
+						<Othr>
+							<Id>10060701</Id>
+							<SchmeNm>
+								<Cd>COID</Cd>
+							</SchmeNm>
+						</Othr>
+					</FinInstnId>
+				</Svcr>
+			</Acct>
+			<Bal>
+				<Tp>
+					<CdOrPrtry>
+						<Cd>OPBD</Cd>
+					</CdOrPrtry>
+				</Tp>
+				<CdtLine>
+					<Incl>false</Incl>
+				</CdtLine>
+				<Amt Ccy="EUR">1596.29</Amt>
+				<CdtDbtInd>CRDT</CdtDbtInd>
+				<Dt>
+					<Dt>2024-04-04</Dt>
+				</Dt>
+			</Bal>
+			<Bal>
+				<Tp>
+					<CdOrPrtry>
+						<Cd>CLBD</Cd>
+					</CdOrPrtry>
+				</Tp>
+				<Amt Ccy="EUR">558.43</Amt>
+				<CdtDbtInd>CRDT</CdtDbtInd>
+				<Dt>
+					<Dt>2024-04-04</Dt>
+				</Dt>
+			</Bal>
+			<TxsSummry>
+				<TtlCdtNtries>
+					<NbOfNtries>4</NbOfNtries>
+					<Sum>3028.08</Sum>
+				</TtlCdtNtries>
+				<TtlDbtNtries>
+					<NbOfNtries>4</NbOfNtries>
+					<Sum>1990.22</Sum>
+				</TtlDbtNtries>
+			</TxsSummry>
+
+			<Ntry>
+        <NtryRef>2024040484255091-1</NtryRef>
+				<Amt Ccy="EUR">516.41</Amt>
+				<CdtDbtInd>CRDT</CdtDbtInd>
+				<Sts>BOOK</Sts>
+				<BookgDt>
+					<Dt>2024-04-04</Dt>
+				</BookgDt>
+				<ValDt>
+					<Dt>2024-04-04</Dt>
+				</ValDt>
+				<AcctSvcrRef>2024040484255091-1</AcctSvcrRef>
+				<BkTxCd>
+          <Domn>
+						<Cd>PMNT</Cd>
+						<Fmly>
+							<Cd>RCDT</Cd>
+							<SubFmlyCd>BOOK</SubFmlyCd>
+						</Fmly>
+					</Domn>
+					<Prtry>
+						<Cd>MK</Cd>
+						<Issr>SWEDBANK AS</Issr>
+					</Prtry>
+				</BkTxCd>
+				<NtryDtls>
+					<TxDtls>
+						<Refs>
+							<AcctSvcrRef>2024040484255091-1</AcctSvcrRef>
+							<InstrId>68</InstrId>
+						</Refs>
+						<AmtDtls>
+							<InstdAmt>
+								<Amt Ccy="EUR">516.41</Amt>
+							</InstdAmt>
+							<TxAmt>
+								<Amt Ccy="EUR">516.41</Amt>
+							</TxAmt>
+						</AmtDtls>
+						<RltdPties>
+							<Dbtr>
+								<Nm>Eliisabet Põder</Nm>
+								<Id>
+									<PrvtId>
+										<Othr>
+											<Id>48802051075</Id>
+											<SchmeNm>
+												<Cd>NIDN</Cd>
+											</SchmeNm>
+										</Othr>
+									</PrvtId>
+								</Id>
+							</Dbtr>
+							<DbtrAcct>
+								<Id>
+									<IBAN>EE202200000000200041</IBAN>
+								</Id>
+							</DbtrAcct>
+						</RltdPties>
+						<RltdAgts>
+							<DbtrAgt>
+								<FinInstnId>
+									<BIC>HABAEE2X</BIC>
+								</FinInstnId>
+							</DbtrAgt>
+						</RltdAgts>
+						
+						
+						<RmtInf>
+							<Ustrd>Payment for dental services</Ustrd>
+						</RmtInf>
+					</TxDtls>
+				</NtryDtls>
+			</Ntry>
+
+			<Ntry>
+        <NtryRef>2024040490588122-2</NtryRef>
+				<Amt Ccy="EUR">993.01</Amt>
+				<CdtDbtInd>DBIT</CdtDbtInd>
+				<Sts>BOOK</Sts>
+				<BookgDt>
+					<Dt>2024-04-04</Dt>
+				</BookgDt>
+				<ValDt>
+					<Dt>2024-04-04</Dt>
+				</ValDt>
+				<AcctSvcrRef>2024040490588122-2</AcctSvcrRef>
+				<BkTxCd>
+          <Domn>
+						<Cd>PMNT</Cd>
+						<Fmly>
+							<Cd>RCDT</Cd>
+							<SubFmlyCd>BOOK</SubFmlyCd>
+						</Fmly>
+					</Domn>
+					<Prtry>
+						<Cd>MK</Cd>
+						<Issr>SWEDBANK AS</Issr>
+					</Prtry>
+				</BkTxCd>
+				<NtryDtls>
+					<TxDtls>
+						<Refs>
+							<AcctSvcrRef>2024040490588122-2</AcctSvcrRef>
+							<InstrId>69</InstrId>
+						</Refs>
+						<AmtDtls>
+							<InstdAmt>
+								<Amt Ccy="EUR">993.01</Amt>
+							</InstdAmt>
+							<TxAmt>
+								<Amt Ccy="EUR">993.01</Amt>
+							</TxAmt>
+						</AmtDtls>
+						
+						
+						<RltdPties>
+							<Cdtr>
+								<Nm>Liisa Lill</Nm>
+							</Cdtr>
+							<CdtrAcct>
+								<Id>
+									<IBAN>EE332200000000200098</IBAN>
+								</Id>
+							</CdtrAcct>
+						</RltdPties>
+						<RltdAgts>
+							<CdtrAgt>
+								<FinInstnId>
+									<BIC>HABAEE2X</BIC>
+								</FinInstnId>
+							</CdtrAgt>
+						</RltdAgts>
+						<RmtInf>
+							<Ustrd>Payment for insurance premiums</Ustrd>
+						</RmtInf>
+					</TxDtls>
+				</NtryDtls>
+			</Ntry>
+
+			<Ntry>
+        <NtryRef>2024040492263703-3</NtryRef>
+				<Amt Ccy="EUR">919.98</Amt>
+				<CdtDbtInd>CRDT</CdtDbtInd>
+				<Sts>BOOK</Sts>
+				<BookgDt>
+					<Dt>2024-04-04</Dt>
+				</BookgDt>
+				<ValDt>
+					<Dt>2024-04-04</Dt>
+				</ValDt>
+				<AcctSvcrRef>2024040492263703-3</AcctSvcrRef>
+				<BkTxCd>
+          <Domn>
+						<Cd>PMNT</Cd>
+						<Fmly>
+							<Cd>RCDT</Cd>
+							<SubFmlyCd>BOOK</SubFmlyCd>
+						</Fmly>
+					</Domn>
+					<Prtry>
+						<Cd>MK</Cd>
+						<Issr>SWEDBANK AS</Issr>
+					</Prtry>
+				</BkTxCd>
+				<NtryDtls>
+					<TxDtls>
+						<Refs>
+							<AcctSvcrRef>2024040492263703-3</AcctSvcrRef>
+							<InstrId>70</InstrId>
+						</Refs>
+						<AmtDtls>
+							<InstdAmt>
+								<Amt Ccy="EUR">919.98</Amt>
+							</InstdAmt>
+							<TxAmt>
+								<Amt Ccy="EUR">919.98</Amt>
+							</TxAmt>
+						</AmtDtls>
+						<RltdPties>
+							<Dbtr>
+								<Nm>Eliisabet Põder</Nm>
+								<Id>
+									<PrvtId>
+										<Othr>
+											<Id>48802051075</Id>
+											<SchmeNm>
+												<Cd>NIDN</Cd>
+											</SchmeNm>
+										</Othr>
+									</PrvtId>
+								</Id>
+							</Dbtr>
+							<DbtrAcct>
+								<Id>
+									<IBAN>EE202200000000200041</IBAN>
+								</Id>
+							</DbtrAcct>
+						</RltdPties>
+						<RltdAgts>
+							<DbtrAgt>
+								<FinInstnId>
+									<BIC>HABAEE2X</BIC>
+								</FinInstnId>
+							</DbtrAgt>
+						</RltdAgts>
+						
+						
+						<RmtInf>
+							<Ustrd>Purchase of office supplies</Ustrd>
+						</RmtInf>
+					</TxDtls>
+				</NtryDtls>
+			</Ntry>
+
+			<Ntry>
+        <NtryRef>2024040412116928-4</NtryRef>
+				<Amt Ccy="EUR">275.48</Amt>
+				<CdtDbtInd>DBIT</CdtDbtInd>
+				<Sts>BOOK</Sts>
+				<BookgDt>
+					<Dt>2024-04-04</Dt>
+				</BookgDt>
+				<ValDt>
+					<Dt>2024-04-04</Dt>
+				</ValDt>
+				<AcctSvcrRef>2024040412116928-4</AcctSvcrRef>
+				<BkTxCd>
+          <Domn>
+						<Cd>PMNT</Cd>
+						<Fmly>
+							<Cd>RCDT</Cd>
+							<SubFmlyCd>BOOK</SubFmlyCd>
+						</Fmly>
+					</Domn>
+					<Prtry>
+						<Cd>MK</Cd>
+						<Issr>SWEDBANK AS</Issr>
+					</Prtry>
+				</BkTxCd>
+				<NtryDtls>
+					<TxDtls>
+						<Refs>
+							<AcctSvcrRef>2024040412116928-4</AcctSvcrRef>
+							<InstrId>71</InstrId>
+						</Refs>
+						<AmtDtls>
+							<InstdAmt>
+								<Amt Ccy="EUR">275.48</Amt>
+							</InstdAmt>
+							<TxAmt>
+								<Amt Ccy="EUR">275.48</Amt>
+							</TxAmt>
+						</AmtDtls>
+						
+						
+						<RltdPties>
+							<Cdtr>
+								<Nm>Priit Kuusk</Nm>
+							</Cdtr>
+							<CdtrAcct>
+								<Id>
+									<IBAN>EE602200000000100090</IBAN>
+								</Id>
+							</CdtrAcct>
+						</RltdPties>
+						<RltdAgts>
+							<CdtrAgt>
+								<FinInstnId>
+									<BIC>HABAEE2X</BIC>
+								</FinInstnId>
+							</CdtrAgt>
+						</RltdAgts>
+						<RmtInf>
+							<Ustrd>Payment for a spa and wellness retreat</Ustrd>
+						</RmtInf>
+					</TxDtls>
+				</NtryDtls>
+			</Ntry>
+
+			<Ntry>
+        <NtryRef>2024040446968123-5</NtryRef>
+				<Amt Ccy="EUR">909.23</Amt>
+				<CdtDbtInd>CRDT</CdtDbtInd>
+				<Sts>BOOK</Sts>
+				<BookgDt>
+					<Dt>2024-04-04</Dt>
+				</BookgDt>
+				<ValDt>
+					<Dt>2024-04-04</Dt>
+				</ValDt>
+				<AcctSvcrRef>2024040446968123-5</AcctSvcrRef>
+				<BkTxCd>
+          <Domn>
+						<Cd>PMNT</Cd>
+						<Fmly>
+							<Cd>RCDT</Cd>
+							<SubFmlyCd>BOOK</SubFmlyCd>
+						</Fmly>
+					</Domn>
+					<Prtry>
+						<Cd>MK</Cd>
+						<Issr>SWEDBANK AS</Issr>
+					</Prtry>
+				</BkTxCd>
+				<NtryDtls>
+					<TxDtls>
+						<Refs>
+							<AcctSvcrRef>2024040446968123-5</AcctSvcrRef>
+							<InstrId>72</InstrId>
+						</Refs>
+						<AmtDtls>
+							<InstdAmt>
+								<Amt Ccy="EUR">909.23</Amt>
+							</InstdAmt>
+							<TxAmt>
+								<Amt Ccy="EUR">909.23</Amt>
+							</TxAmt>
+						</AmtDtls>
+						<RltdPties>
+							<Dbtr>
+								<Nm>Tiiu Kruus</Nm>
+								<Id>
+									<PrvtId>
+										<Othr>
+											<Id>47712135718</Id>
+											<SchmeNm>
+												<Cd>NIDN</Cd>
+											</SchmeNm>
+										</Othr>
+									</PrvtId>
+								</Id>
+							</Dbtr>
+							<DbtrAcct>
+								<Id>
+									<IBAN>EE152200000000200034</IBAN>
+								</Id>
+							</DbtrAcct>
+						</RltdPties>
+						<RltdAgts>
+							<DbtrAgt>
+								<FinInstnId>
+									<BIC>HABAEE2X</BIC>
+								</FinInstnId>
+							</DbtrAgt>
+						</RltdAgts>
+						
+						
+						<RmtInf>
+							<Ustrd>Subscription renewal for a cloud storage service</Ustrd>
+						</RmtInf>
+					</TxDtls>
+				</NtryDtls>
+			</Ntry>
+
+			<Ntry>
+        <NtryRef>2024040445848417-6</NtryRef>
+				<Amt Ccy="EUR">682.46</Amt>
+				<CdtDbtInd>CRDT</CdtDbtInd>
+				<Sts>BOOK</Sts>
+				<BookgDt>
+					<Dt>2024-04-04</Dt>
+				</BookgDt>
+				<ValDt>
+					<Dt>2024-04-04</Dt>
+				</ValDt>
+				<AcctSvcrRef>2024040445848417-6</AcctSvcrRef>
+				<BkTxCd>
+          <Domn>
+						<Cd>PMNT</Cd>
+						<Fmly>
+							<Cd>RCDT</Cd>
+							<SubFmlyCd>BOOK</SubFmlyCd>
+						</Fmly>
+					</Domn>
+					<Prtry>
+						<Cd>MK</Cd>
+						<Issr>SWEDBANK AS</Issr>
+					</Prtry>
+				</BkTxCd>
+				<NtryDtls>
+					<TxDtls>
+						<Refs>
+							<AcctSvcrRef>2024040445848417-6</AcctSvcrRef>
+							<InstrId>73</InstrId>
+						</Refs>
+						<AmtDtls>
+							<InstdAmt>
+								<Amt Ccy="EUR">682.46</Amt>
+							</InstdAmt>
+							<TxAmt>
+								<Amt Ccy="EUR">682.46</Amt>
+							</TxAmt>
+						</AmtDtls>
+						<RltdPties>
+							<Dbtr>
+								<Nm>Taavi Laas</Nm>
+								<Id>
+									<PrvtId>
+										<Othr>
+											<Id>37206061723</Id>
+											<SchmeNm>
+												<Cd>NIDN</Cd>
+											</SchmeNm>
+										</Othr>
+									</PrvtId>
+								</Id>
+							</Dbtr>
+							<DbtrAcct>
+								<Id>
+									<IBAN>EE462200000000100051</IBAN>
+								</Id>
+							</DbtrAcct>
+						</RltdPties>
+						<RltdAgts>
+							<DbtrAgt>
+								<FinInstnId>
+									<BIC>HABAEE2X</BIC>
+								</FinInstnId>
+							</DbtrAgt>
+						</RltdAgts>
+						
+						
+						<RmtInf>
+							<Ustrd>Subscription renewal for a podcast platform</Ustrd>
+						</RmtInf>
+					</TxDtls>
+				</NtryDtls>
+			</Ntry>
+
+			<Ntry>
+        <NtryRef>2024040471516722-7</NtryRef>
+				<Amt Ccy="EUR">274.73</Amt>
+				<CdtDbtInd>DBIT</CdtDbtInd>
+				<Sts>BOOK</Sts>
+				<BookgDt>
+					<Dt>2024-04-04</Dt>
+				</BookgDt>
+				<ValDt>
+					<Dt>2024-04-04</Dt>
+				</ValDt>
+				<AcctSvcrRef>2024040471516722-7</AcctSvcrRef>
+				<BkTxCd>
+          <Domn>
+						<Cd>PMNT</Cd>
+						<Fmly>
+							<Cd>RCDT</Cd>
+							<SubFmlyCd>BOOK</SubFmlyCd>
+						</Fmly>
+					</Domn>
+					<Prtry>
+						<Cd>MK</Cd>
+						<Issr>SWEDBANK AS</Issr>
+					</Prtry>
+				</BkTxCd>
+				<NtryDtls>
+					<TxDtls>
+						<Refs>
+							<AcctSvcrRef>2024040471516722-7</AcctSvcrRef>
+							<InstrId>74</InstrId>
+						</Refs>
+						<AmtDtls>
+							<InstdAmt>
+								<Amt Ccy="EUR">274.73</Amt>
+							</InstdAmt>
+							<TxAmt>
+								<Amt Ccy="EUR">274.73</Amt>
+							</TxAmt>
+						</AmtDtls>
+						
+						
+						<RltdPties>
+							<Cdtr>
+								<Nm>Priit Raudsepp</Nm>
+							</Cdtr>
+							<CdtrAcct>
+								<Id>
+									<IBAN>EE982200000000100085</IBAN>
+								</Id>
+							</CdtrAcct>
+						</RltdPties>
+						<RltdAgts>
+							<CdtrAgt>
+								<FinInstnId>
+									<BIC>HABAEE2X</BIC>
+								</FinInstnId>
+							</CdtrAgt>
+						</RltdAgts>
+						<RmtInf>
+							<Ustrd>Payment for professional services</Ustrd>
+						</RmtInf>
+					</TxDtls>
+				</NtryDtls>
+			</Ntry>
+
+			<Ntry>
+        <NtryRef>2024040493757099-8</NtryRef>
+				<Amt Ccy="EUR">447.00</Amt>
+				<CdtDbtInd>DBIT</CdtDbtInd>
+				<Sts>BOOK</Sts>
+				<BookgDt>
+					<Dt>2024-04-04</Dt>
+				</BookgDt>
+				<ValDt>
+					<Dt>2024-04-04</Dt>
+				</ValDt>
+				<AcctSvcrRef>2024040493757099-8</AcctSvcrRef>
+				<BkTxCd>
+          <Domn>
+						<Cd>PMNT</Cd>
+						<Fmly>
+							<Cd>RCDT</Cd>
+							<SubFmlyCd>BOOK</SubFmlyCd>
+						</Fmly>
+					</Domn>
+					<Prtry>
+						<Cd>MK</Cd>
+						<Issr>SWEDBANK AS</Issr>
+					</Prtry>
+				</BkTxCd>
+				<NtryDtls>
+					<TxDtls>
+						<Refs>
+							<AcctSvcrRef>2024040493757099-8</AcctSvcrRef>
+							<InstrId>75</InstrId>
+						</Refs>
+						<AmtDtls>
+							<InstdAmt>
+								<Amt Ccy="EUR">447.00</Amt>
+							</InstdAmt>
+							<TxAmt>
+								<Amt Ccy="EUR">447.00</Amt>
+							</TxAmt>
+						</AmtDtls>
+						
+						
+						<RltdPties>
+							<Cdtr>
+								<Nm>Katrin Vaher</Nm>
+							</Cdtr>
+							<CdtrAcct>
+								<Id>
+									<IBAN>EE242200000000200066</IBAN>
+								</Id>
+							</CdtrAcct>
+						</RltdPties>
+						<RltdAgts>
+							<CdtrAgt>
+								<FinInstnId>
+									<BIC>HABAEE2X</BIC>
+								</FinInstnId>
+							</CdtrAgt>
+						</RltdAgts>
+						<RmtInf>
+							<Ustrd>Donation to a healthcare organization</Ustrd>
+						</RmtInf>
+					</TxDtls>
+				</NtryDtls>
+			</Ntry>
+		</Stmt>
+	</BkToCstmrStmt>
+</Document>

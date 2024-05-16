@@ -1,0 +1,28 @@
+.log-container p {
+    margin: 0;
+    padding: 2px;
+    font-family: monospace;
+}
+
+.info {
+    color: #4490dd;
+}
+
+.error {
+    color: rgba(255, 0, 64, 0.76);
+}
+
+.warn {
+    color: #FF8000;
+}
+
+.get {
+    color: rgba(0, 128, 0, 0.65);
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+}
+
+.statement {
+    color: rgba(192, 79, 192, 0.65);
+    font-weight: bold;
+}

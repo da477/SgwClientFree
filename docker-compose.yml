@@ -1,0 +1,29 @@
+#Deploy Spring Boot WAR to Tomcat Docker Container
+#==================================================
+version: '3.8'
+services:
+  tomcat-app:
+    image: tomcat:latest
+    container_name: tomcat-container
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - SGW_CLIENT_DIR=/tmp
+    volumes:
+      - ./target:/mnt
+    working_dir: /tmp
+    command: >
+      /bin/bash -c "rm -rf /usr/local/tomcat/webapps/* &&
+                    cp /mnt/SgwClientFree.war /usr/local/tomcat/webapps/ &&
+                    catalina.sh run"
+      
+
+#Deploy JAR to Docker Container - create a Dockerfile and put in its:
+#==================================================
+#FROM openjdk:17-slim
+#ARG JAR_FILE=target/SgwClientFree.jar
+#COPY ${JAR_FILE} /tmp
+#EXPOSE 8080
+#WORKDIR /tmp
+#CMD java -jar SgwClientFree.jar --server.port=8080 -app.working.dir=/tmp

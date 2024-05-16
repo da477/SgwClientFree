@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds">
+    <springProperty scope="context" name="application.name" source="spring.application.name"/>
+    <springProperty scope="context" name="LOG_DIR" source="logging.dir.path" defaultValue="/tmp"/>
+
+    <property scope="context" name="APP_LOG_NAME" value="sgw_web"/>
+    <property scope="context" name="LOG_NAME" value="${application.name}"/>
+    <property scope="context" name="LOG_PATTERN"
+              value="%magenta(%d{yy-MM-dd HH:mm:ss}) %highlight(%-5p %c{1} - %m%n)"/>
+    <property scope="context" name="LOG_PATTERN_SM"
+              value="%magenta(%d{yy-MM-dd HH:mm:ss}) %highlight(%-5p - %m%n)"/>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR}/${LOG_NAME}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_DIR}/${LOG_NAME}.%d{yyyyMMdd}.log.gz</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%replace(${LOG_PATTERN}){'(\u001B\[.*?m)', ''}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="AppFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR}/${APP_LOG_NAME}.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <FileNamePattern>${LOG_DIR}/${APP_LOG_NAME}.%i.log.gz</FileNamePattern>
+            <MinIndex>1</MinIndex>
+            <MaxIndex>1</MaxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>50MB</MaxFileSize>
+        </triggeringPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%replace(${LOG_PATTERN_SM}){'(\u001B\[.*?m)', ''}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <springProfile name="prod">
+        <logger name="org.da477.SgwClientFree" level="info" additivity="false">
+            <appender-ref ref="console"/>
+            <appender-ref ref="AppFileAppender"/>
+        </logger>
+
+        <root level="info">
+            <appender-ref ref="console"/>
+            <appender-ref ref="FILE"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="dev">
+        <root level="debug">
+            <appender-ref ref="console"/>
+        </root>
+    </springProfile>
+
+</configuration>
