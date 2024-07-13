@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.nio.file.Path;
 import java.sql.Timestamp;
+import java.time.LocalDate;
 
 /**
  * MessageDTO class
@@ -42,6 +43,10 @@ public class MessageDTO {
     private MessageStatus status;
     private MessageType type;
     private String desc;
+
+    public MessageDTO(MessageType type, MessageStatus status, String iban, LocalDate fromDate, LocalDate toDate) {
+        // constructor
+    }
 
     public void setFilePath(Path filePath) {
         this.filePath = filePath.getFileName().toString();
