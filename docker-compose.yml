@@ -2,22 +2,21 @@
 #==================================================
 version: '3.8'
 services:
-  tomcat-app:
+  tomcat:
     image: tomcat:latest
-    container_name: tomcat-container
+    container_name: tomcat
     restart: always
     ports:
       - "8080:8080"
     environment:
       - SGW_CLIENT_DIR=/tmp
     volumes:
-      - ./target:/mnt
-    working_dir: /tmp
-    command: >
-      /bin/bash -c "rm -rf /usr/local/tomcat/webapps/* &&
-                    cp /mnt/SgwClientFree.war /usr/local/tomcat/webapps/ &&
-                    catalina.sh run"
-      
+      - ./target:/usr/local/tomcat/webapps
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
 #Deploy JAR to Docker Container - create a Dockerfile and put in its:
 #==================================================

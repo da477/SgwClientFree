@@ -1,9 +1,8 @@
-# <span style="color: green;">SGWClient: Integration with Swedbank SGW API</span>
+# <span style="color: green;">Integration with SGW API</span>
 
-SGWClient is a web application designed to facilitate communication with Swedbank SGW API 2.0.
-Developer Portal: [Swedbank Developer Portal](https://developer.swedbank.com)
+It is a web app designed to facilitate communication with SGW API 2.0.
 
-![DashBoard.png](src/main/resources/docs/DashBoard.png)
+![App Demo](.github/media/demoSgw.gif)
 
 ### <span style="color: #4A90E2;">Dependencies</span>
 - **Spring Boot Starters**: Security, Data-Jpa, Test

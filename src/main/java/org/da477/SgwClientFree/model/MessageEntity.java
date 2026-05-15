@@ -1,28 +1,27 @@
 package org.da477.SgwClientFree.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import lombok.*;
+import org.hibernate.proxy.HibernateProxy;
 
 import java.sql.Timestamp;
 
 /**
  * MessageEntity class
- *
  * Entity class for storing messages in the database.
  *
  * @author da477
  * @version 1.0
  * @since 5/18/24
  */
-@Slf4j
 @Entity
 @Table(name = "MESSAGES")
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
+@ToString
 public class MessageEntity {
 
     @Id
@@ -63,4 +62,22 @@ public class MessageEntity {
     public boolean isNew() {
         return this.getId() == null || this.getId() == 0;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getEffectiveClass(this) != getEffectiveClass(o)) return false;
+        return id != null && id.equals(((MessageEntity) o).id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getEffectiveClass(this).hashCode();
+    }
+
+    private static Class<?> getEffectiveClass(Object o) {
+        return o instanceof HibernateProxy ?
+                ((HibernateProxy) o).getHibernateLazyInitializer().getPersistentClass() : o.getClass();
+    }
+
 }
